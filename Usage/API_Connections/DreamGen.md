@@ -31,8 +31,7 @@ DreamGen offers `opus-v1-sm`, `opus-v1-lg`, and `opus-v1-xl`. The larger the mod
 
 The DreamGen models expect a specific input format, which is [documented here](https://dreamgen.com/docs/models/opus/v1).
 
-SillyTavern comes with built-in presets made for DreamGen. Make sure to use these settings as your baseline.
-These settings try to stick to the DreamGen format as closely as possible but due to the irregular formatting of character cards, it is not always perfect.
+SillyTavern comes with built-in presets made for DreamGen. Make sure to use these settings as your baseline. These settings try to stick to the DreamGen format as closely as possible but due to the irregular formatting of character cards, it is not always perfect.
 
 1. Go to the "Advanced Formatting" page.
 2. Under "Context Template" pick `DreamGen Role-Play V1 Llama3 / ChatML` depending on the model (*).
@@ -42,22 +41,21 @@ These settings try to stick to the DreamGen format as closely as possible but du
 ![DreamGen context settings](/static/dreamgen/dreamgen_st_context_settings.jpg)
 ![DreamGen instruct settings](/static/dreamgen/dreamgen_st_instruct_settings.jpg)
 
-(*) When to use Llama 3 and when to use ChatML? As of 2024/06/17, `opus-v1-sm` is `ChatML` and all other models are `Llama3` based.
-When running local models, the template will be indicated in the model's HuggingFace card. 
+(*) When to use Llama 3 and when to use ChatML? As of 2024/06/17, `opus-v1-sm` is `ChatML` and all other models are `Llama3` based. When running local models, the template will be indicated in the model's HuggingFace card.
 
 ## Completion Settings
 
 DreamGen supports:
 
--   "Temperature", "Top P", "Top K" and "Min P"
--   "Presence Penalty", "Frequency Penalty" and "Repetition Penalty" (without range)
--   "Min Length" -- lets you force the model to generate at least `min(min_length, max_tokens)` tokens
+- "Temperature", "Top P", "Top K" and "Min P"
+- "Presence Penalty", "Frequency Penalty" and "Repetition Penalty" (without range)
+- "Min Length" -- lets you force the model to generate at least `min(min_length, max_tokens)` tokens
 
 Good starting values might be:
 
--   Min P: 0.05
--   Temperature: 0.8
--   Repetition Penalty: 1.1
+- Min P: 0.05
+- Temperature: 0.8
+- Repetition Penalty: 1.1
 
 ## Tips for Formatting
 
@@ -96,29 +94,26 @@ Mia is a kind woman...
 
 Note that the **prompt should be a description of the story**, rather than instructions or directives on how the story should be written. **Avoid using phrases like:**
 
--   "Write the story as if..."
--   "Make sure to..."
--   etc.
+- "Write the story as if..."
+- "Make sure to..."
+- etc.
 
 See more [examples](https://dreamgen.com/docs/models/opus/v1#task-story-writing) of what the plot, style and character descriptions should look like.
 
 The default "DreamGen Role-Play V1" template substitutes the different sections as follows:
 
--   `## Plot description:` will consist of {%{`{{scenario}}`}%} and {%{`{{wiBefore}}`}%}.
--   `## Style description:` is not provided, you should either add it to the system prompt under Advanced Settings, or to the character cards, at the end of {%{`{{scenario}}`}%}. This section is useful to influence the narrative style (first, second, third person), the tense (past, present), the level of detail and verbosity, etc.
--   `## Characters:` will have a {%{`{{char}}`}%} character with description consisting of {%{`{{description}}`}%} and {%{`{{personality}}`}%} and a {%{`{{user}}`}%} character with description consisting of {%{`{{persona}}`}%}.
+- `## Plot description:` will consist of {%{`{{scenario}}`}%} and {%{`{{wiBefore}}`}%}.
+- `## Style description:` is not provided, you should either add it to the system prompt under Advanced Settings, or to the character cards, at the end of {%{`{{scenario}}`}%}. This section is useful to influence the narrative style (first, second, third person), the tense (past, present), the level of detail and verbosity, etc.
+- `## Characters:` will have a {%{`{{char}}`}%} character with description consisting of {%{`{{description}}`}%} and {%{`{{personality}}`}%} and a {%{`{{user}}`}%} character with description consisting of {%{`{{persona}}`}%}.
 
 ### Message Examples and Initial Message
 
-The DreamGen models are very responsive to the context -- they will largely stick to the writing style (and facts) presented in the previous conversation turns.
-This makes the message examples and the initial message very important.
+The DreamGen models are very responsive to the context -- they will largely stick to the writing style (and facts) presented in the previous conversation turns. This makes the message examples and the initial message very important.
 
 #### Formatting Message Examples
 
 The {%{`{{mesExamples}}`}%} are appended at the end of the system prompt. To take full advantage of the instruct formatting, make sure that your examples are separated with the `<START>` separator. For example:
 
-{%{
-
 ```
 <START>
 {{user}}: (user's turn)
@@ -127,8 +122,6 @@ The {%{`{{mesExamples}}`}%} are appended at the end of the system prompt. To tak
 {{user}}: (user's turn)
 {{char}}: (char's turn)
 ```
-
-}%}
 
 ### Examples
 
@@ -165,17 +158,15 @@ You can start with these:
 - Presence Penalty: 0.1
 - Frequency Penalty: 0.1
 
-### How can I make the responses longer or shorter? 
+### How can I make the responses longer or shorter?
 
 You have several options:
 
--   Change or add the `## Style description:` in the system prompt or model card. You can try adding something like "Sentences are generally long, and the narrative describes the setting in painstaking detail."
--   Change the `Min Length` in the Completion Settings.
--   Add `Last Output Sequence` similar to the following in the Advanced Formatting settings under Instruct Mode:
+- Change or add the `## Style description:` in the system prompt or model card. You can try adding something like "Sentences are generally long, and the narrative describes the setting in painstaking detail."
+- Change the `Min Length` in the Completion Settings.
+- Add `Last Output Sequence` similar to the following in the Advanced Formatting settings under Instruct Mode:
 
 Here's an example of the `Last Output Sequence` that might help make the model respond in a more verbose way, using the Llama 3 template:
-
-{%{
 
 ```
 <|eot_id|>
@@ -185,15 +176,9 @@ Length: 400 words
 Plot: {{char}} replies to {{user}} in detailed and elaborate way.<|eot_id|>
 <|start_header_id|>writer character: {{char}}<|end_header_id|>
 
-
 ```
 
 The same expressed using the ChatML template:
-
-}%}
-
-
-{%{
 
 ```
 <|im_end|>
@@ -203,14 +188,11 @@ Plot: {{char}} replies to {{user}} in detailed and elaborate way.<|im_end|>
 <|im_start|>text names= {{char}}
 ```
 
-}%}
-
 You can change the text within to something more suitable for your scenario or context.
 
-### How can I stop the model from repeating itself? 
+### How can I stop the model from repeating itself?
 
-If the model repeats what's in the context, you can try increasing "Repetition Penalty" in the Completion Settings or you can try rephrasing the part of the context that's getting repeated.
-If the model repeats itself within one message, you can try increasing "Presence Penalty" or "Frequency Penalty".
+If the model repeats what's in the context, you can try increasing "Repetition Penalty" in the Completion Settings or you can try rephrasing the part of the context that's getting repeated. If the model repeats itself within one message, you can try increasing "Presence Penalty" or "Frequency Penalty".
 
 ### How can I steer the story?
 
