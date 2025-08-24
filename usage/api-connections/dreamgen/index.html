@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.809371428007">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.809372504035">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -14,29 +14,29 @@
     <meta name="description" content="DreamGen is an app and an API for AI-powered creative writing.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.sillytavern.app/usage/api-connections/dreamgen/">
+    <link rel="canonical" href="https://hansergawrgura.github.io/usage/api-connections/dreamgen/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.sillytavern.app/usage/api-connections/dreamgen/">
+    <meta property="og:url" content="https://hansergawrgura.github.io/usage/api-connections/dreamgen/">
     <meta property="og:title" content="DreamGen | docs.ST.app">
     <meta property="og:description" content="DreamGen is an app and an API for AI-powered creative writing.">
-    <meta property="og:image" content="https://docs.sillytavern.app/static/dreamgen/dreamgen_api_keys_new.jpg">
+    <meta property="og:image" content="https://hansergawrgura.github.io/static/dreamgen/dreamgen_api_keys_new.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.sillytavern.app/usage/api-connections/dreamgen/">
+    <meta property="twitter:url" content="https://hansergawrgura.github.io/usage/api-connections/dreamgen/">
     <meta property="twitter:title" content="DreamGen | docs.ST.app">
     <meta property="twitter:description" content="DreamGen is an app and an API for AI-powered creative writing.">
-    <meta property="twitter:image" content="https://docs.sillytavern.app/static/dreamgen/dreamgen_api_keys_new.jpg">
+    <meta property="twitter:image" content="https://hansergawrgura.github.io/static/dreamgen/dreamgen_api_keys_new.jpg">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.11.0.809371428007" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.11.0.809372504035" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.11.0.809371428007" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.11.0.809372504035" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.11.0.809371428007" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.11.0.809372504035" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -243,8 +243,7 @@
     </h2>
 </doc-anchor-target>
 <p>The DreamGen models expect a specific input format, which is <a href="https://dreamgen.com/docs/models/opus/v1">documented here</a>.</p>
-<p>SillyTavern comes with built-in presets made for DreamGen. Make sure to use these settings as your baseline.
-These settings try to stick to the DreamGen format as closely as possible but due to the irregular formatting of character cards, it is not always perfect.</p>
+<p>SillyTavern comes with built-in presets made for DreamGen. Make sure to use these settings as your baseline. These settings try to stick to the DreamGen format as closely as possible but due to the irregular formatting of character cards, it is not always perfect.</p>
 <ol>
 <li>Go to the &quot;Advanced Formatting&quot; page.</li>
 <li>Under &quot;Context Template&quot; pick <code v-pre>DreamGen Role-Play V1 Llama3 / ChatML</code> depending on the model (*).</li>
@@ -260,8 +259,7 @@ These settings try to stick to the DreamGen format as closely as possible but du
     <figcaption class="caption">DreamGen instruct settings</figcaption>
 </figure>
 </p>
-<p>(*) When to use Llama 3 and when to use ChatML? As of 2024/06/17, <code v-pre>opus-v1-sm</code> is <code v-pre>ChatML</code> and all other models are <code v-pre>Llama3</code> based.
-When running local models, the template will be indicated in the model&#x27;s HuggingFace card.</p>
+<p>(*) When to use Llama 3 and when to use ChatML? As of 2024/06/17, <code v-pre>opus-v1-sm</code> is <code v-pre>ChatML</code> and all other models are <code v-pre>Llama3</code> based. When running local models, the template will be indicated in the model&#x27;s HuggingFace card.</p>
 <doc-anchor-target id="completion-settings">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#completion-settings">#</doc-anchor-trigger>
@@ -334,8 +332,7 @@ Mia is a kind woman...</code></pre>
         <span>Message Examples and Initial Message</span>
     </h3>
 </doc-anchor-target>
-<p>The DreamGen models are very responsive to the context -- they will largely stick to the writing style (and facts) presented in the previous conversation turns.
-This makes the message examples and the initial message very important.</p>
+<p>The DreamGen models are very responsive to the context -- they will largely stick to the writing style (and facts) presented in the previous conversation turns. This makes the message examples and the initial message very important.</p>
 <doc-anchor-target id="formatting-message-examples">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#formatting-message-examples">#</doc-anchor-trigger>
@@ -345,11 +342,11 @@ This makes the message examples and the initial message very important.</p>
 <p>The <code v-pre>{{mesExamples}}</code> are appended at the end of the system prompt. To take full advantage of the instruct formatting, make sure that your examples are separated with the <code v-pre>&lt;START&gt;</code> separator. For example:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none"><code v-pre class="language-none">&lt;START&gt;
-{{user}}: (user's turn)
-{{char}}: (char's turn)
+: (user's turn)
+: (char's turn)
 &lt;START&gt;
-{{user}}: (user's turn)
-{{char}}: (char's turn)</code></pre>
+: (user's turn)
+: (char's turn)</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="examples">
     <h3>
@@ -427,9 +424,8 @@ This makes the message examples and the initial message very important.</p>
 &lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
 
 Length: 400 words
-Plot: {{char}} replies to {{user}} in detailed and elaborate way.&lt;|eot_id|&gt;
-&lt;|start_header_id|&gt;writer character: {{char}}&lt;|end_header_id|&gt;
-
+Plot:  replies to  in detailed and elaborate way.&lt;|eot_id|&gt;
+&lt;|start_header_id|&gt;writer character: &lt;|end_header_id|&gt;
 </code></pre>
 </doc-codeblock></div>
 <p>The same expressed using the ChatML template:</p>
@@ -437,8 +433,8 @@ Plot: {{char}} replies to {{user}} in detailed and elaborate way.&lt;|eot_id|&gt
 <pre translate="no" class="language-none"><code v-pre class="language-none">&lt;|im_end|&gt;
 &lt;|im_start|&gt;user
 Length: 400 words
-Plot: {{char}} replies to {{user}} in detailed and elaborate way.&lt;|im_end|&gt;
-&lt;|im_start|&gt;text names= {{char}}</code></pre>
+Plot:  replies to  in detailed and elaborate way.&lt;|im_end|&gt;
+&lt;|im_start|&gt;text names= </code></pre>
 </doc-codeblock></div>
 <p>You can change the text within to something more suitable for your scenario or context.</p>
 <doc-anchor-target id="how-can-i-stop-the-model-from-repeating-itself">
@@ -447,8 +443,7 @@ Plot: {{char}} replies to {{user}} in detailed and elaborate way.&lt;|im_end|&gt
         <span>How can I stop the model from repeating itself?</span>
     </h3>
 </doc-anchor-target>
-<p>If the model repeats what&#x27;s in the context, you can try increasing &quot;Repetition Penalty&quot; in the Completion Settings or you can try rephrasing the part of the context that&#x27;s getting repeated.
-If the model repeats itself within one message, you can try increasing &quot;Presence Penalty&quot; or &quot;Frequency Penalty&quot;.</p>
+<p>If the model repeats what&#x27;s in the context, you can try increasing &quot;Repetition Penalty&quot; in the Completion Settings or you can try rephrasing the part of the context that&#x27;s getting repeated. If the model repeats itself within one message, you can try increasing &quot;Presence Penalty&quot; or &quot;Frequency Penalty&quot;.</p>
 <doc-anchor-target id="how-can-i-steer-the-story">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-steer-the-story">#</doc-anchor-trigger>
