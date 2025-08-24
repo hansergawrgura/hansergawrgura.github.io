@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hansergawrgura.github.io/sitemap.xml.gz
+Sitemap: https://docs.example.com/sitemap.xml.gz
