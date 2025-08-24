@@ -1,4 +1,0 @@
-# _config.yml
-exclude:
-  - For_Contributors/**/*  # 排除整个 For_Contributors 目录
-  - Usage/Characters/macros.md  # 排除单个易出错文件
