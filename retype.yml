@@ -1,3 +1,0 @@
-url: hansergawrgura.github.io  # 例如：username.github.io 或 username.github.io/repo-name
-output: .retype  # 构建输出目录（需与工作流中部署的目录一致）
-input: .  # 文档源文件目录（默认根目录，可根据实际调整）
